@@ -174,4 +174,7 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# Folder with its own repo
+todolist-v2
+
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,web
