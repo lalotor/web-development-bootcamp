@@ -176,5 +176,6 @@ dist
 
 # Folder with its own repo
 todolist-v2
+simple-blog
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,web
