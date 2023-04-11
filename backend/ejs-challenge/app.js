@@ -64,13 +64,14 @@ app.get("/posts/:postTitle", function (req, res) {
 });
 
 app.post("/compose", function (req, res) {
-  let postBody = req.body.postBody;
-  if (postBody.length > PREVIEW_MAX_LENGTH) {
-    postBody = postBody.slice(0, PREVIEW_MAX_LENGTH) + "...";
+  let bodyPreview = req.body.postBody;
+  if (bodyPreview.length > PREVIEW_MAX_LENGTH) {
+    bodyPreview = bodyPreview.slice(0, PREVIEW_MAX_LENGTH) + "...";
   }
   const post = {
     title: req.body.postTitle,
-    body: postBody,
+    body: req.body.postBody,
+    bodyPreview: bodyPreview,
     link: "posts/" + _.lowerCase(req.body.postTitle)
   }
   posts.push(post);
